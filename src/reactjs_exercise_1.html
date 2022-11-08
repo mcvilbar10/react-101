@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--<input type="text" onkeyup="onKeyupHandler(event)">-->
+    <div id="res"></div>
+
+</body>
+<script>
+    class Furniture  {
+        constructor(type, brand)
+        {
+            this.type=type;
+            this.brand=brand;
+        }
+    }
+
+    class Madeof extends Furniture{
+        constructor(madeof, size)
+        {
+            super("Round Table","Ikea");
+            this.madeof=madeof;
+            this.size=size;
+        }
+    }
+    class Supplier extends Furniture{
+        constructor(name, contactnum, address)
+        {
+            super("Round Table", "B&B");
+            this.name=name;
+            this.contactnum=contactnum;
+            this.address=address;
+        }
+    }
+
+    let furn = new Furniture("Round Table","B&B");
+
+    
+    document.write(furn.type);
+
+</script>
+</html>
